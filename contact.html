@@ -31,6 +31,17 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" async></script>
 
     <script type="text/javascript" src="js/shared.js" async></script>
+
+    <script>
+    function openMailClient()
+    {
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+        document.getElementById('subject').value = '';
+        document.getElementById('message').value = '';
+        window.open('mailto:empirejourneys@gmail.com?subject=' + subject + '&body=' + message);
+    }
+    </script>
 </head>
 
 <body>
@@ -103,7 +114,7 @@
             <!-- Map Column -->
             <div class="col-md-8">
                 <!-- Embedded Google Map -->
-                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=44.7721933,20.4095453&z=15&output=embed"></iframe>
+                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=44.8056392,20.4740712&z=15&output=embed"></iframe>
             </div>
             <!-- Contact Details Column -->
             <div class="col-md-4">
@@ -140,25 +151,13 @@
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row">
             <div class="col-md-8">
-                <h3>Send us a Message</h3>
-                <form name="sentMessage" id="contactForm" novalidate>
+                <h3>Send us an Email</h3>
+                <form name="sentEmail" id="emailForm" action="javascript:openMailClient()" novalidate>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Full Name:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <label>Subject:</label>
+                            <input type="text" class="form-control" id="subject" required data-validation-required-message="Please enter the subject.">
                             <p class="help-block"></p>
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Phone Number:</label>
-                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Email Address:</label>
-                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
                         </div>
                     </div>
                     <div class="control-group form-group">
