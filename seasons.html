@@ -40,6 +40,19 @@
         .tg .tg-s6z2 {text-align:center}
         .tg .tg-baqh {text-align:center;vertical-align:top}
     </style>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <script>
+
+    function makeReservation()
+    {
+        localStorage.setItem('place', $.trim(document.title.split('::')[1]))
+        window.open('reservation.html','_blank');
+    }
+
+    </script>
 </head>
 
 <body>
@@ -247,6 +260,8 @@
                         <td class="tg-baqh">25</td>
                     </tr>
                 </table>
+
+                <button class="btn btn-primary" style="margin-top:10px;" onclick="makeReservation()">Make a Reservation</button>
             </div>
         </div>
 
@@ -287,9 +302,6 @@
 
     </div>
     <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Lightbox js -->
     <script src="lightbox/js/lightbox.js"></script>
