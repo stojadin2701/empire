@@ -114,3 +114,7 @@ footer {
         float:none;
     }
 }
+
+.no_blue {
+  color:inherit;
+}
