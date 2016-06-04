@@ -30,7 +30,7 @@
 
 </head>
 
-<body>
+<body onload="showRecent('Goldstar Resort & Suites', 'Hôtel des Flandres')">
 
     <!-- Navigation -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -131,7 +131,9 @@
         </div>
         <!-- /.row -->
 
+        <h3>Recent Reservations in Nice</h3>
         <hr>
+        <div id="recent_reservations"></div>
 
         <!-- Footer -->
         <footer>
@@ -147,6 +149,10 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+
+    <script src="js/store+json2.min.js"></script>
+
+    <script src="js/recent.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
