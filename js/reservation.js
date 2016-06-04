@@ -55,11 +55,24 @@ function formValid()
         response += "Credit card number is not in the proper format.\n"
     }
 
-    return response;
+    if (response == "") {
+    var now = new Date();
+    var arr = store.get('reservations');
+    if (arr === undefined) arr = new Array();
+    arr.push({
+        place: document.getElementById('place').value,
+        dateFrom: document.getElementById('dateFrom').value,
+        dateTo: document.getElementById('dateTo').value,
+        persons: document.getElementById('persons').options[document.getElementById('persons').selectedIndex].value,
+        reserveTime: now
+    });
+    store.set('reservations', arr);
+}
+return response;
 
 }
 
-$(document).ready(function() { 
+$(document).ready(function() {
 
     $("#reservationForm").submit(function(e){
         var response = formValid();

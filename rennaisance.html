@@ -40,65 +40,74 @@
         .tg .tg-s6z2 {text-align:center}
         .tg .tg-baqh {text-align:center;vertical-align:top}
     </style>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<script>
+    function makeReservation() {
+        localStorage.setItem('place', $.trim(document.title.split('::')[1]))
+        window.open('reservation.html', '_blank');
+    }
+</script>
 </head>
 
 <body>
 
-      <!-- Navigation -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <img class="navbar-brand navbar-brand-img" src="img/logo.png">
-              <a class="navbar-brand navbar-brand-text" href="index.html">Empire Journeys</a>
-          </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-left">
-                <li>
-                    <a href="summer2016.html">Summer 2016</a>
-                </li>
-                <li>
-                    <a href="cities.html">European Cities</a>
-                </li>
-                <li  class = "selected">
-                    <a href="exotic.html">Exotic Destinations</a>
-                </li>
-                <li>
-                    <a href="newyear2016.html">New Year 2016</a>
-                </li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                  <li>
-                      <a href="about.html">About</a>
-                  </li>
-                  <li>
-                      <a href="contact.html">Contact</a>
-                  </li>
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language(EN)<b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                          <li class="active">
-                              <a href="index.html">English</a>
-                          </li>
-                          <li>
-                              <a href="index.html">Srpski</a>
-                          </li>
-                      </ul>
-                  </li>
-              </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand navbar-brand-img" src="img/logo.png">
+                <a class="navbar-brand navbar-brand-text" href="index.html">Empire Journeys</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a href="summer2016.html">Summer 2016</a>
+                    </li>
+                    <li>
+                        <a href="cities.html">European Cities</a>
+                    </li>
+                    <li class="selected">
+                        <a href="exotic.html">Exotic Destinations</a>
+                    </li>
+                    <li>
+                        <a href="newyear2016.html">New Year 2016</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language(EN)<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="active">
+                                <a href="index.html">English</a>
+                            </li>
+                            <li>
+                                <a href="index.html">Srpski</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-          </div>
-          <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container -->
-  </nav>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
     <!-- Page Content -->
     <div class="container">
@@ -126,7 +135,8 @@
                 <h3>
                     Description
                 </h3>
-                <p>Featuring an award-winning restaurant overlooking Victoria Harbour, Renaissance Harbour View Hong Kong, a Marriott Luxury & Lifestyle Hotel in Hong Kong, is set on scenic Wanchai Waterfront. Directly connected to Hong Kong Convention and Exhibition Centre, it offers a landscaped pool and fitness centre.</p>
+                <p>Featuring an award-winning restaurant overlooking Victoria Harbour, Renaissance Harbour View Hong Kong, a Marriott Luxury & Lifestyle Hotel in Hong Kong, is set on scenic Wanchai Waterfront. Directly connected to Hong Kong Convention and
+                    Exhibition Centre, it offers a landscaped pool and fitness centre.</p>
                 <p>Renaissance Harbour View Hotel Hong Kong is a 5-minute drive from the city centre and a 10-minute drive from the iconic Victoria Peak and lively Lan Kwai Fong. It is a 20-minute train ride from Temple Street.</p>
                 <p>Renaissance Harbour View Hotel Hong Kong features stylish rooms with marble bathrooms for a touch of luxury. Guests have the convenience of cable TV, a safe and ironing facilities.</p>
                 <p>A fitness centre provides guests the chance to maintain their work outs, while a golf practice facility and putting green is available for golfers. Staff can also attend to multiple business needs.</p>
@@ -174,22 +184,37 @@
         <div class="row">
             <div class="col-lg-12">
                 <h3 style="margin-top:10px;">Pricing</h3>
-                <p>Prices shown are in USD per person, per night.</p>
+                <p>Prices shown are in USD per person, per night.
+                    <br>
+                    <a href="pdf/rennaisance.pdf">Download pdf</a>
+                </p>
                 <table class="tg">
                     <tr>
                         <th class="tg-s6z2">Number of Grownups</th>
-                        <th class="tg-s6z2">01.06<br>10.06</th>
-                        <th class="tg-s6z2">11.06<br>20.06</th>
-                        <th class="tg-s6z2">21.06<br>30.06</th>
-                        <th class="tg-s6z2">01.07<br>10.07</th>
-                        <th class="tg-s6z2">11.07<br>20.07</th>
-                        <th class="tg-s6z2">21.07<br>31.07</th>
-                        <th class="tg-baqh">01.08<br>10.08</th>
-                        <th class="tg-baqh">11.08<br>20.08</th>
-                        <th class="tg-baqh">21.08<br>31.08</th>
-                        <th class="tg-baqh">01.09<br>10.09</th>
-                        <th class="tg-baqh">11.09<br>20.09</th>
-                        <th class="tg-baqh">21.09<br>30.09</th>
+                        <th class="tg-s6z2">01.06
+                            <br>10.06</th>
+                        <th class="tg-s6z2">11.06
+                            <br>20.06</th>
+                        <th class="tg-s6z2">21.06
+                            <br>30.06</th>
+                        <th class="tg-s6z2">01.07
+                            <br>10.07</th>
+                        <th class="tg-s6z2">11.07
+                            <br>20.07</th>
+                        <th class="tg-s6z2">21.07
+                            <br>31.07</th>
+                        <th class="tg-baqh">01.08
+                            <br>10.08</th>
+                        <th class="tg-baqh">11.08
+                            <br>20.08</th>
+                        <th class="tg-baqh">21.08
+                            <br>31.08</th>
+                        <th class="tg-baqh">01.09
+                            <br>10.09</th>
+                        <th class="tg-baqh">11.09
+                            <br>20.09</th>
+                        <th class="tg-baqh">21.09
+                            <br>30.09</th>
                     </tr>
                     <tr>
                         <td class="tg-s6z2">2</td>
@@ -237,6 +262,8 @@
                         <td class="tg-baqh">60</td>
                     </tr>
                 </table>
+
+                <button class="btn btn-primary" style="margin-top:10px;" onclick="makeReservation()">Make a Reservation</button>
             </div>
         </div>
 
@@ -253,7 +280,7 @@
             <div class="col-md-4">
                 <h3>Contact Details</h3>
                 <p>
-                   1 Harbour Road, Wanchai, Hong Kong
+                    1 Harbour Road, Wanchai, Hong Kong
                 </p>
                 <p><i class="fa fa-phone"></i>
                     <abbr title="Phone">P</abbr>: +852 2802 8888</p>
@@ -277,9 +304,6 @@
 
     </div>
     <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Lightbox js -->
     <script src="lightbox/js/lightbox.js"></script>
