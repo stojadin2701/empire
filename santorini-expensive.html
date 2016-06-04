@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Empire Journeys :: Sydney</title>
+    <title>Empire Journeys :: Santorini</title>
     <link rel="shortcut icon" type="image/png" href="img/logo.png" />
 
     <!-- Bootstrap Core CSS -->
@@ -30,7 +30,7 @@
 
 </head>
 
-<body onload="showRecent('Meriton Serviced Apartments Pitt Street', 'Four Seasons Hotel')">
+<body onload="showRecent('Filotera Suites', 'Ilioperato')">
 
     <!-- Navigation -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -49,7 +49,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-left">
-                <li>
+                <li class = "selected">
                     <a href="summer2016.html">Summer 2016</a>
                 </li>
                 <li>
@@ -58,7 +58,7 @@
                 <li>
                     <a href="exotic.html">Exotic Destinations</a>
                 </li>
-                <li  class = "selected">
+                <li>
                     <a href="newyear2016.html">New Year 2016</a>
                 </li>
               </ul>
@@ -94,15 +94,15 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Sydney
-                    <small>The City of Bridges</small>
+                <h1 class="page-header">Santorini
+                    <small>The Country of Light</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a>
                     </li>
-                    <li><a href="newyear2016.html">New Year 2016</a>
+                    <li><a href="summer2016.html">Summer 2016</a>
                     </li>
-                    <li class="active">Sydney</li>
+                    <li class="active">Santorini</li>
                 </ol>
             </div>
         </div>
@@ -111,36 +111,27 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-6 img-portfolio">
-                <a href="meriton.html">
-                    <img class="img-responsive img-hover" src="img/new_year_destinations/sydney/meriton.jpg" alt="">
+                <a href="filotera.html">
+                    <img class="img-responsive img-hover" src="img/summer_destinations/santorini/filotera.jpg" alt="">
                 </a>
                 <h3>
-                    <a href="meriton.html">Meriton Serviced Apartments Pitt Street </a>
+                    <a href="filotera.html">Filotera Suites</a>
                 </h3>
-                <p>In the heart of Sydney’s central business district, Meriton Serviced Apartments Pitt Street offers 178 luxurious modern apartments.</p>
-            </div>
-            <div class="col-md-6 img-portfolio">
-                <a href="seasons.html">
-                    <img class="img-responsive img-hover" src="img/new_year_destinations/sydney/seasons.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="seasons.html">Four Seasons Hotel </a>
-                </h3>
-                <p>Overlooking Sydney's historic Rocks area, Four Seasons Hotel has free Wi-Fi, a bar, restaurant, fitness center and swimming pool. It features luxurious rooms with panoramic views of the iconic Sydney Opera House and Circular Quay.</p>
+                <p>Offering an outdoor pool and a hot tub, the traditionally built Filotera Suites are in Oia Village. They feature elegantly decorated accommodation with views of the Aegean Sea and the caldera.</p>
             </div>
         </div>
         <!-- /.row -->
 
         <h3 class='page-header'>Filer by Price</h3>
         <div class="radio">
-            <label><input type="radio" name="price" value="cheap">Less than $210</label>
+            <label><input type="radio" name="price" value="cheap">Less than $130</label>
         </div>
         <div class="radio">
-            <label><input type="radio" name="price" value="expensive">More then $210</label>
+            <label><input type="radio" name="price" value="expensive">More then $130</label>
         </div>
         <button class="btn btn-primary" onclick="applyFilter()">Apply Filter</button>
 
-        <h3 class="page-header">Recent Reservations in Sydney</h3>
+        <h3 class="page-header">Recent Reservations in Santorini</h3>
         <div id="recent_reservations"></div>
 
         <!-- Footer -->
