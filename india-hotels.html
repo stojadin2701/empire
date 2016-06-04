@@ -131,8 +131,16 @@
         </div>
         <!-- /.row -->
 
-        <h3>Recent Reservations in India</h3>
-        <hr>
+        <h3 class='page-header'>Filter by Price</h3>
+        <div class="radio">
+            <label><input type="radio" name="price" value="cheap">Less than $170</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="price" value="expensive">More then $170</label>
+        </div>
+        <button class="btn btn-primary" onclick="applyFilter()">Apply Filter</button>
+
+        <h3 class="page-header">Recent Reservations in India</h3>
         <div id="recent_reservations"></div>
 
         <!-- Footer -->
@@ -153,6 +161,8 @@
     <script src="js/store+json2.min.js"></script>
 
     <script src="js/recent.js"></script>
+
+    <script src="js/filter.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

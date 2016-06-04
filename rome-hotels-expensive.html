@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Empire Journeys :: China</title>
+    <title>Empire Journeys :: Rome</title>
     <link rel="shortcut icon" type="image/png" href="img/logo.png" />
 
     <!-- Bootstrap Core CSS -->
@@ -30,7 +30,7 @@
 
 </head>
 
-<body onload="showRecent('The Langham', 'Renaissance Hotel')">
+<body onload="showRecent('Palazzo Dama', 'Hotel Raphael')">
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -52,10 +52,10 @@
                     <li>
                         <a href="summer2016.html">Summer 2016</a>
                     </li>
-                    <li>
+                    <li class="selected">
                         <a href="cities.html">European Cities</a>
                     </li>
-                    <li  class="selected">
+                    <li>
                         <a href="exotic.html">Exotic Destinations</a>
                     </li>
                     <li>
@@ -94,15 +94,15 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">China
-                    <small>The Red Dragon</small>
+                <h1 class="page-header">Prague
+                    <small>City of a Hundred Spires</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a>
                     </li>
-                    <li><a href="exotic.html">Exotic Destinations</a>
+                    <li><a href="cities.html">European Cities</a>
                     </li>
-                    <li class="active">China</li>
+                    <li class="active">Rome</li>
                 </ol>
             </div>
         </div>
@@ -111,36 +111,27 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-6 img-portfolio">
-                <a href="langham.html">
-                    <img class="img-responsive img-hover" src="img/exotic_destinations/china/langham.jpg" alt="">
+                <a href="raphael.html">
+                    <img class="img-responsive img-hover" src="img/cities/rome/raphael.jpg" alt="">
                 </a>
                 <h3>
-                    <a href="langham.html">The Langham, Shanghai</a>
+                    <a href="raphael.html">Hotel Raphael</a>
                 </h3>
-                <p>As the gateway to Xintiandi, the lifestyle and entertainment hub of Shanghai, The Langham, Shanghai, Xintiandi is ideally located adjacent to the retail utopia of Huaihai Road, surrounded by various trendy clubs, glamorous international restaurants and designer boutiques. Boasting Chuan Spa, an indoor pool and gourmet cuisine across several stylish restaurants, the 5-star property is a 1-minute stroll from South Huangpi Road Subway Station (Line 1), which provides easy access to the top tourist attractions in Shanghai.</p>
-            </div>
-            <div class="col-md-6 img-portfolio">
-                <a href="rennaisance.html">
-                    <img class="img-responsive img-hover" src="img/exotic_destinations/china/rennaisance.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="rennaisance.html">Renaissance Hotel, Hong Kong</a>
-                </h3>
-                <p>Featuring an award-winning restaurant overlooking Victoria Harbour, Renaissance Harbour View Hong Kong, a Marriott Luxury & Lifestyle Hotel in Hong Kong, is set on scenic Wanchai Waterfront. Directly connected to Hong Kong Convention and Exhibition Centre, it offers a landscaped pool and fitness centre. Renaissance Harbour View Hotel Hong Kong is a 5-minute drive from the city centre and a 10-minute drive from the iconic Victoria Peak and lively Lan Kwai Fong. It is a 20-minute train ride from Temple Street.</p>
+                <p>One street from Piazza Navona, Hotel Raphael offers luxurious rooms with marble bathroom and parquet floors. Its roof terrace boasts panoramic views of Rome, from St. Peter's to the Pantheon.</p>
             </div>
         </div>
         <!-- /.row -->
 
         <h3 class='page-header'>Filter by Price</h3>
         <div class="radio">
-            <label><input type="radio" name="price" value="cheap">Less than $200</label>
+            <label><input type="radio" name="price" value="cheap">Less than $150</label>
         </div>
         <div class="radio">
-            <label><input type="radio" name="price" value="expensive">More then $200</label>
+            <label><input type="radio" name="price" value="expensive">More then $150</label>
         </div>
         <button class="btn btn-primary" onclick="applyFilter()">Apply Filter</button>
 
-        <h3 class="page-header">Recent Reservations in China</h3>
+        <h3 class="page-header">Recent Reservations in Rome</h3>
         <div id="recent_reservations"></div>
 
         <!-- Footer -->
