@@ -100,7 +100,7 @@ footer {
   background-color:#ccc;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 1168px) and (max-width: 1291px) {
     .navbar-collapse.collapse {
         display: none !important;
     }
