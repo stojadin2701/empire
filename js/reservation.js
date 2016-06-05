@@ -6,6 +6,40 @@ function parseDate(input) {
   return new Date(parts[0], parts[1]-1, parts[2]); // Note: months are 0-based
 }
 
+function isValidDate(dateString)
+{
+    // First check for the pattern
+    var regex_date = /^\d{4}\-\d{1,2}\-\d{1,2}$/;
+
+    if(!regex_date.test(dateString))
+    {
+        return false;
+    }
+
+    // Parse the date parts to integers
+    var parts   = dateString.split("-");
+    var day     = parseInt(parts[2], 10);
+    var month   = parseInt(parts[1], 10);
+    var year    = parseInt(parts[0], 10);
+
+    // Check the ranges of month and year
+    if(year < 1000 || year > 3000 || month == 0 || month > 12)
+    {
+        return false;
+    }
+
+    var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+
+    // Adjust for leap years
+    if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
+    {
+        monthLength[1] = 29;
+    }
+
+    // Check the range of the day
+    return day > 0 && day <= monthLength[month - 1];
+}
+
 function fillPlace()
 {
     if (localStorage.getItem('place'))
@@ -41,12 +75,27 @@ function formValid()
         response += "Number of persons traveling can't be larger then the room's capacity.\n"
     }
 
-    var dateFrom = parseDate(document.getElementById('dateFrom').value);
-    var dateTo = parseDate(document.getElementById('dateTo').value);
-
-    if (dateFrom > dateTo)
+    var dateFromValid = isValidDate(document.getElementById('dateFrom').value);
+    if (!dateFromValid)
     {
-        response += "'Date To' must be later than 'Date From'.\n"
+        response += "'Date From' field is not in valid format.\n"
+    }
+
+    var dateToValid = isValidDate(document.getElementById('dateTo').value);
+    if (!dateToValid)
+    {
+        response += "'Date To' field is not in valid format.\n"
+    }
+
+    if (dateToValid && dateFromValid)
+    {
+        var dateFrom = parseDate(document.getElementById('dateFrom').value);
+        var dateTo = parseDate(document.getElementById('dateTo').value);
+
+        if (dateFrom > dateTo)
+        {
+            response += "'Date To' must be later than 'Date From'.\n"
+        }
     }
 
     re = /\d{4}-\d{4}-\d{4}-\d{4}/
