@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Empire travel :: Sidnej</title>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand navbar-brand-img" src="img/logo.png">
+                <a class="navbar-brand navbar-brand-text" href="index-sr.html">Empire Journeys</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a href="summer2016-sr.html">Leto 2016</a>
+                    </li>
+                    <li>
+                        <a href="cities-sr.html">Evropski Gradovi</a>
+                    </li>
+                    <li>
+                        <a href="exotic-sr.html">Egzotične Destinacije</a>
+                    </li>
+                    <li class="active">
+                        <a href="newyear2016-sr.html">Nova Godina 2016</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about-sr.html">O Nama</a>
+                    </li>
+                    <li>
+                        <a href="contact-sr.html">Kontakt</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language(SR)<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="sydney.html">English</a>
+                            </li>
+                            <li class="active">
+                                <a href="sydney-sr.html">Srpski</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Sidnej
+                    <small>Grad Mostova</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index-sr.html">Početna</a>
+                    </li>
+                    <li><a href="newyear2016-sr.html">Nova Godina 2016</a>
+                    </li>
+                    <li class="active">Sydney</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-6 img-portfolio">
+                <a href="meriton-sr.html">
+                    <img class="img-responsive img-hover" src="img/new_year_destinations/sydney/meriton.jpg" alt="">
+                </a>
+                <h3>
+                    <a href="meriton-sr.html">Meriton Serviced Apartments Pitt Street </a>
+                </h3>
+                <p>U srcu centralne poslovne zone u Sidneju, Meriton Serviced Apartments Pitt Street nudi 178 luksuznih modernih apartmana.</p>
+            </div>
+            <div class="col-md-6 img-portfolio">
+                <a href="seasons-sr.html">
+                    <img class="img-responsive img-hover" src="img/new_year_destinations/sydney/seasons.jpg" alt="">
+                </a>
+                <h3>
+                    <a href="seasons-sr.html">Four Seasons Hotel </a>
+                </h3>
+                <p>Overlooking Sydney's historic Rocks area, Four Seasons Hotel has free Wi-Fi, a bar, restaurant, fitness center and swimming pool. It features luxurious rooms with panoramic views of the iconic Sydney Opera House and Circular Quay.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <h3 class='page-header'>Filer by Price</h3>
+        <div class="radio">
+            <label><input type="radio" name="price" value="cheap">Less than $210</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="price" value="expensive">More then $210</label>
+        </div>
+        <button class="btn btn-primary" onclick="applyFilter()">Apply Filter</button>
+
+        <h3 class="page-header">Recent Reservations in Sydney</h3>
+        <div id="recent_reservations"></div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Stefan Bajić, Nemanja Stojoski; Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <script src="js/store+json2.min.js"></script>
+
+    <script src="js/recent.js"></script>
+
+    <script src="js/filter.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
